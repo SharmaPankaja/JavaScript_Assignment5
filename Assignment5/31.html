@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt1">
+    <input type="text" id="txt2">
+    <button onclick="func()">Click</button>
+    <p id="para"></p>
+</body>
+
+</html>
+
+<script>
+    function func() {
+        var data1 = document.getElementById("txt1").value;
+        var data2 = document.getElementById("txt2").value;
+
+        //console.log(typeof data1)
+        if(typeof data1,data2 ==Number)
+    {
+        var sum=data1+data2;
+        document.getElementById("para").innerHTML="sum of "+data1+" & "+data2+" = "+sum;
+    }
+    else{
+        var sum = parseInt(data1)+parseInt(data2);
+        document.getElementById("para").innerHTML="sum of "+data1+" & "+data2+" = "+sum;
+    }
+        
+    }
+</script>

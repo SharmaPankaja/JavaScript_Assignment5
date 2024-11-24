@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textbox Validation</title>
+    <style>
+        .error-border {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="txt" placeholder="Enter something">
+
+    <button onclick="checkTextbox()">Submit</button>
+</body>
+
+</html>
+
+<script>
+    function checkTextbox() {
+        var txtValue = document.getElementById('txt').value;
+        var textbox = document.getElementById('txt');
+
+        if (txtValue === "") {
+
+            textbox.classList.add('error-border');
+            console.log("Textbox is empty");
+        } else {
+
+            textbox.classList.remove('error-border');
+            console.log("Textbox value: " + txtValue);
+        }
+    }
+</script>

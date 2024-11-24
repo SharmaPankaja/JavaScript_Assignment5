@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <input type="text" id="textbox" onkeyup="convertText()" placeholder="Type here...">
+    
+    <p id="para1">Uppercase: </p> 
+    <p id="para2">Lowercase: </p> 
+
+    <script>
+        function convertText() {
+            
+            const inputText = document.getElementById('textbox').value;
+            
+          
+            const upper = inputText.toUpperCase();
+            const lower = inputText.toLowerCase();
+            
+          
+            document.getElementById('para1').textContent = "Uppercase: " + upper;
+            document.getElementById('para2').textContent = "Lowercase: " + lower;
+        }
+    </script>
+</body>
+</html>

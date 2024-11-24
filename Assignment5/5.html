@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseMove</title>
+</head>
+<body>
+    <h2>Move your mouse to see the coordinates:</h2>
+    <p>X: <span id="x-coord">0</span>, Y: <span id="y-coord">0</span></p>
+
+    <script>
+       
+        const xCoordElement = document.getElementById('x-coord');
+        const yCoordElement = document.getElementById('y-coord');
+
+        
+        document.addEventListener('mousemove', function(event) {
+            
+            xCoordElement.textContent = event.clientX;
+            yCoordElement.textContent = event.clientY;
+        });
+    </script>
+</body>
+</html>
